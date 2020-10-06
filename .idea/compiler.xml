@@ -7,8 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ssm" />
-        <module name="springDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javaLearning" target="6" />
+      <module name="springDemo" target="6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
