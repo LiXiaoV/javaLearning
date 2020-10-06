@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.iml" filepath="$PROJECT_DIR$/basic/basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c3p0demo/c3p0demo.iml" filepath="$PROJECT_DIR$/c3p0demo/c3p0demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/druidDemo/druidDemo.iml" filepath="$PROJECT_DIR$/druidDemo/druidDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbcTemplateDemo/jdbcTemplateDemo.iml" filepath="$PROJECT_DIR$/jdbcTemplateDemo/jdbcTemplateDemo.iml" />
+    </modules>
+  </component>
+</project>
