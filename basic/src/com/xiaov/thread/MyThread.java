@@ -1,6 +1,6 @@
 package com.xiaov.thread;
 
-public class MyThread extends Thread{
+public class MyThread extends Thread {
     public MyThread() {
     }
 

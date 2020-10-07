@@ -5,10 +5,10 @@ public class DemoWaitAndNotify {
         Object object = new Object();
 
         //创建消费者
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
-                synchronized (object){
+                synchronized (object) {
                     System.out.println("告知老板包子的种类和数量");
                     try {
                         object.wait();
@@ -23,7 +23,7 @@ public class DemoWaitAndNotify {
         }.start();
 
         //创建一个生产者
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
                 //花5秒做包子
@@ -34,7 +34,7 @@ public class DemoWaitAndNotify {
                     e.printStackTrace();
                 }
 
-                synchronized (object){
+                synchronized (object) {
                     //告知顾客，可以吃包子了
                     System.out.println("包子做好了，可以吃了");
                     object.notify();

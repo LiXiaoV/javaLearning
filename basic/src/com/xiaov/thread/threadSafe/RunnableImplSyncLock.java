@@ -11,23 +11,24 @@ public class RunnableImplSyncLock implements Runnable {
     private int tickets = 100;
 
     Lock lock = new ReentrantLock();
+
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
-        while (true){
+        while (true) {
 
             try {
                 lock.lock();
-                if(tickets > 0){
+                if (tickets > 0) {
                     Thread.sleep(10);
 
-                    System.out.println(Thread.currentThread().getName()+"-->"+"正在卖"+tickets+"号票");
+                    System.out.println(Thread.currentThread().getName() + "-->" + "正在卖" + tickets + "号票");
                     tickets--;
-                }else
+                } else
                     break;
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }finally {
+            } finally {
                 lock.unlock();
             }
 

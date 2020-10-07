@@ -12,16 +12,16 @@ public class RunnableImplSync implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
-        while (true){
-            synchronized (object){
-                if(tickets > 0){
+        while (true) {
+            synchronized (object) {
+                if (tickets > 0) {
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
 
-                    System.out.println(Thread.currentThread().getName()+"-->"+"正在卖"+tickets+"号票");
+                    System.out.println(Thread.currentThread().getName() + "-->" + "正在卖" + tickets + "号票");
                     tickets--;
                 } else
                     break;

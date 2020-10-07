@@ -9,11 +9,11 @@ public class RunnableImpl implements Runnable {
 
     @Override
     public void run() {
-        while (true){
-            if(tickets > 0){
-                System.out.println(Thread.currentThread().getName()+"-->"+"正在卖"+tickets+"号票");
+        while (true) {
+            if (tickets > 0) {
+                System.out.println(Thread.currentThread().getName() + "-->" + "正在卖" + tickets + "号票");
                 tickets--;
-            }else
+            } else
                 break;
         }
 

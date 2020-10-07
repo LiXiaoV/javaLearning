@@ -6,13 +6,13 @@ public class DemoLambda {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println(Thread.currentThread().getName()+":创建了一个新线程");
+                System.out.println(Thread.currentThread().getName() + ":创建了一个新线程");
             }
         }).start();
 
         //使用Lambda表达式实现多线程
         new Thread(() -> {
-            System.out.println(Thread.currentThread().getName()+":创建了一个新线程");
+            System.out.println(Thread.currentThread().getName() + ":创建了一个新线程");
         }).start();
     }
 }
