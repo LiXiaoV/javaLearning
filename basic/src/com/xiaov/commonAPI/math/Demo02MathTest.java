@@ -7,7 +7,7 @@ package com.xiaov.commonAPI.math;
 public class Demo02MathTest {
     public static void main(String[] args) {
         int count = 0;
-        for (int i = -11; i < 6; i++) {
+        for (int i = -10; i < 6; i++) {
             int abs = Math.abs(i);
             if (abs > 6 || abs < 2.1) {
                 count++;
