@@ -40,7 +40,7 @@ public class DownloadImage implements DownLoadProgress {
     }
 
     @Test
-    public void getDownloadProgress(){
+    public void getDownloadProgress() {
         while (true) {
             System.out.println("this.downProgressNumber = " + this.downProgressNumber);
             try {
@@ -60,13 +60,13 @@ public class DownloadImage implements DownLoadProgress {
     @Override
     public void running(long i) {
         this.downProgressNumber = (int) i;
-        System.out.println("下载进度是"+this.downProgressNumber+"%");
+        System.out.println("下载进度是" + this.downProgressNumber + "%");
     }
 
 
     @Override
     public void stop(String filePath) {
-        System.out.println("下载完成,存储路径是"+filePath);
+        System.out.println("下载完成,存储路径是" + filePath);
         this.downProgressNumber = 0;
     }
 
