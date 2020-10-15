@@ -7,10 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ssm" />
+        <module name="mybatisDemo" />
+        <module name="myBatisDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javaLearning" target="6" />
+      <module name="mybatisDemo" target="1.5" />
       <module name="springDemo" target="6" />
     </bytecodeTargetLevel>
   </component>
