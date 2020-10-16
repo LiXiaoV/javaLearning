@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/pom.xml" />
         <option value="$PROJECT_DIR$/../mybatisDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisDemo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

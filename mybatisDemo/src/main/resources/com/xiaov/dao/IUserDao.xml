@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xiaov.dao.IUserDao">
+    <!--配置查询结果的列名和实体类的属性名的对应关系-->
+    <resultMap id="userMap" type="com.xiaov.domain.User">
+        <!--主键字段的对应-->
+        <id property="id" column="id"></id>
+        <!--非主键字段的对应-->
+        <result property="username" column="username"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+    </resultMap>
+
+    <!--配置查询所有-->
+    <select id="findAll" resultMap="userMap">
+        <!--<select id="findAll" resultType="com.xiaov.domain.User" >-->
+        <!-- 起别名来解决数据库与实体类名称不同的问题，速度快，as前面是数据库字段，as后面是实体类属性名称-->
+        -- select id as id ,username as username,birthday as birthday,sex as sex,address as address from user
+        select * from user
+    </select>
+
+    <!--保存用户-->
+    <insert id="saveUser" parameterType="com.xiaov.domain.User">
+        /*获取插入后，插入数据的id*/
+        <selectKey keyProperty="id" keyColumn="id" resultType="java.lang.Integer" order="AFTER">
+            select last_insert_id();
+        </selectKey>
+        insert into user(username,address,sex,birthday) values(#{username},#{address},#{sex},#{birthday});
+    </insert>
+
+    <!--更新用户-->
+    <update id="updateUser" parameterType="com.xiaov.domain.User">
+        update user set username=#{username},address=#{address},sex=#{sex},birthday=#{birthday} where id=#{id}
+    </update>
+
+    <!--根据ID删除用户-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where id=#{id}
+    </delete>
+
+    <!--根据id查询用户-->
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.xiaov.domain.User">
+        select * from user where id=#{id}
+    </select>
+
+    <!--根据用户名进行模糊查询-->
+    <select id="findByUsername" parameterType="java.lang.String" resultType="com.xiaov.domain.User">
+        select * from user where username like #{username}
+    </select>
+
+    <!--查询用户总数-->
+    <select id="countUsers" resultType="java.lang.Integer">
+        select count(id) from user
+    </select>
+
+    <!--根据QueryVo进行模糊查询-->
+    <select id="findByVo" parameterType="com.xiaov.domain.QueryVo" resultType="com.xiaov.domain.User">
+        select * from user where username like #{user.username}
+    </select>
+</mapper>
