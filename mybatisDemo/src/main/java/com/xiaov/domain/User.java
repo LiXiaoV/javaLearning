@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ *  用户的实体类
  * @author xiaov_li
  * @create 2020-04-20 4:03 上午
  */

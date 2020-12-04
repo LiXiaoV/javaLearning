@@ -43,7 +43,7 @@ public class JDBCDemo10 {
 //            // 手动制造异常
 //            int i = 3/0;
 
-            pstmt2.executeUpdate();
+            int i = pstmt2.executeUpdate();
             //提交事务
             conn.commit();
         } catch (Exception e) {
